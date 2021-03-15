@@ -3,7 +3,7 @@
     padding:0;
     margin:0;
     max-width:100%; /*you can never be bigger than your parent*/
-    border:1px solid grey;
+    /* border:1px solid grey; */
 }
 
 /*General Styles*/
@@ -170,3 +170,85 @@ p.copyright{
     text-align:right;
     margin-right:5%;
 }
+
+/* Media Queries */
+/* min-width - is mobile first its for scaling first */
+/* max-width - desktop first - its for scaling down */
+
+/* Tablet */
+@media(max-width: 800px){
+    #about div{
+        width: 30%;
+    }
+    .container .text div{
+        width: 60%;
+    }
+    .bgimg{
+        height: 82vh;
+
+    }
+    .left div{
+        width:45%;
+        line-height: 2;
+    }
+    .right img{
+        width: 60%;
+    }
+}
+
+/* Phone */
+@media(max-width: 500px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo {
+        width: 15%;
+    }
+    .links {
+        width: 100%;
+    }
+    /* about section styles */
+
+    #about{
+        background-image: none;
+        background-color: #e1e2e4;
+        justify-content: center;
+    }
+    #about div{
+        margin-right: 0;
+        width: 80%;
+    }
+}
+
+/* plant section styles */
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container div{
+        width: 80%;
+    }
+    .bgimg{
+        height: 60vh;
+
+    }
+    .mobile{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .right{
+        order:-1;
+    }
+    footer h2{
+        order:-2;
+    }
+    p.copyright{
+        text-align: center;
+    }
+    .left div{
+        width: 60px;
+    }
